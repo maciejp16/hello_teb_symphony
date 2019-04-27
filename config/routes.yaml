@@ -1,3 +1,21 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+# config/routes.yaml
+
+# the "app_lucky_number" route name is not important yet
+app_lucky_number:
+  path: /lucky/number
+  controller: App\Controller\LuckyController::number
+
+blog_list:
+# Matches /blog exactly
+  path:     /blog
+  controller: App\Controller\BlogController::list
+
+blog_show:
+  # Matches /blog/*
+  # but not /blog/slug/extra-part
+  path:     /blog/{slug}
+  controller: App\Controller\BlogController::show

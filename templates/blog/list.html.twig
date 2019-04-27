@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Symfony!</title>
+    </head>
+    <body>
+        <h1>page_title</h1>
+
+        <ul id="list">
+            {% for item in list %}
+                <li><a href="/blog/{{ item.slug }}">{{ item.desc }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
